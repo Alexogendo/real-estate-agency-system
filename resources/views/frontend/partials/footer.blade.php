@@ -58,7 +58,7 @@
             @if(isset($footersettings[0]) && $footersettings[0]['footer'])
                 {{ $footersettings[0]['footer'] }}
             @else
-                © 2019 Alex Ogendo Developer: Call 0711295523.
+                © 2019 Bernadette Developer.
             @endif
 
             @if(isset($footersettings[0]) && $footersettings[0]['facebook'])

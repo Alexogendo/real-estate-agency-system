@@ -7,7 +7,7 @@
                     @if(isset($navbarsettings[0]) && $navbarsettings[0]['name'])
                         {{ $navbarsettings[0]['name'] }}
                     @else
-                        Real State
+                        Real Estate Agency Management System
                     @endif
                     <i class="material-icons left">location_city</i>
                 </a>
