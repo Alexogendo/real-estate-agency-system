@@ -11,7 +11,7 @@
                     <div class="searchbar">
                         <div class="input-field col s12 m3">
                             <input type="text" name="city" id="autocomplete-input" class="autocomplete custominputbox" autocomplete="off">
-                            <label for="autocomplete-input">Enter City or State</label>
+                            <label for="autocomplete-input">Enter Location or Town</label>
                         </div>
 
                         <div class="input-field col s12 m2">
