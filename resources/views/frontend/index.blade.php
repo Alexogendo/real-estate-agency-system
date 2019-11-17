@@ -33,63 +33,174 @@
             </div>
             <div class="row">
 
-                @foreach($properties as $property)
+                
                     <div class="col s12 m4">
                         <div class="card">
                             <div class="card-image">
-                                @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
-                                    <span class="card-image-bg" style="background-image:url({{Storage::url('property/'.$property->image)}});"></span>
-                                @else
-                                    <span class="card-image-bg"><span>
-                                @endif
-                                @if($property->featured == 1)
+                                
+                                    <span class="card-image-bg" style=""></span>
+                                
+                                    <span class="card-image-bg"> Better House<span>
+                               
                                     <a class="btn-floating halfway-fab waves-effect waves-light indigo" title="Featured"><i class="small material-icons">star</i></a>
-                                @endif
+                                
                             </div>
                             <div class="card-content property-content">
-                                <a href="{{ route('property.show',$property->slug) }}">
-                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip="{{ $property->title }}">{{ str_limit( $property->title, 18 ) }}</span>
+                                <a href="">
+                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip=""> House</span>
                                 </a>
 
                                 <div class="address">
-                                    <i class="small material-icons left">location_city</i>
-                                    <span>{{ ucfirst($property->city) }}</span>
+                                    <i class="small material-icons left">location_town</i>
+                                    <span>Nakuru</span>
                                 </div>
                                 <div class="address">
                                     <i class="small material-icons left">place</i>
-                                    <span>{{ ucfirst($property->address) }}</span>
+                                    <span>Njoro</span>
                                 </div>
                                 <div class="address">
                                     <i class="small material-icons left">check_box</i>
-                                    <span>{{ ucfirst($property->type) }} for {{ $property->purpose }}</span>
+                                    <span>140 </span>
                                 </div>
 
                                 <h5>
-                                    &dollar;{{ $property->price }}
-                                    <div class="right" id="propertyrating-{{$property->id}}"></div>
+                    
+                                    <div class="right" id=""></div>
                                 </h5>
                             </div>
                             <div class="card-action property-action">
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Bedroom: <strong>{{ $property->bedroom}}</strong> 
+                                    Bedroom: <strong>4</strong> 
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Bathroom: <strong>{{ $property->bathroom}}</strong> 
+                                    Bathroom: <strong>2</strong> 
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Area: <strong>{{ $property->area}}</strong> Square Feet
+                                    Area: <strong>352222</strong> Square Feet
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">comment</i> 
-                                    <strong>{{ $property->comments_count}}</strong>
+                                    <strong>Great</strong>
                                 </span>
                             </div>
                         </div>
                     </div>
-                @endforeach
+
+
+
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                
+                                    <span class="card-image-bg" style=""></span>
+                                
+                                    <span class="card-image-bg"> Better House<span>
+                               
+                                    <a class="btn-floating halfway-fab waves-effect waves-light indigo" title="Featured"><i class="small material-icons">star</i></a>
+                                
+                            </div>
+                            <div class="card-content property-content">
+                                <a href="">
+                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip=""> House</span>
+                                </a>
+
+                                <div class="address">
+                                    <i class="small material-icons left">location_town</i>
+                                    <span>Nakuru</span>
+                                </div>
+                                <div class="address">
+                                    <i class="small material-icons left">place</i>
+                                    <span>Njoro</span>
+                                </div>
+                                <div class="address">
+                                    <i class="small material-icons left">check_box</i>
+                                    <span>140 </span>
+                                </div>
+
+                                <h5>
+                    
+                                    <div class="right" id=""></div>
+                                </h5>
+                            </div>
+                            <div class="card-action property-action">
+                                <span class="btn-flat">
+                                    <i class="material-icons">check_box</i>
+                                    Bedroom: <strong>4</strong> 
+                                </span>
+                                <span class="btn-flat">
+                                    <i class="material-icons">check_box</i>
+                                    Bathroom: <strong>2</strong> 
+                                </span>
+                                <span class="btn-flat">
+                                    <i class="material-icons">check_box</i>
+                                    Area: <strong>352222</strong> Square Feet
+                                </span>
+                                <span class="btn-flat">
+                                    <i class="material-icons">comment</i> 
+                                    <strong>Great</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image">
+                                
+                                    <span class="card-image-bg" style=""></span>
+                                
+                                    <span class="card-image-bg"> Better House<span>
+                               
+                                    <a class="btn-floating halfway-fab waves-effect waves-light indigo" title="Featured"><i class="small material-icons">star</i></a>
+                                
+                            </div>
+                            <div class="card-content property-content">
+                                <a href="">
+                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip="">Rental</span>
+                                </a>
+
+                                <div class="address">
+                                    <i class="small material-icons left">location_town</i>
+                                    <span>Kisumu</span>
+                                </div>
+                                <div class="address">
+                                    <i class="small material-icons left">place</i>
+                                    <span>Lake side</span>
+                                </div>
+                                <div class="address">
+                                    <i class="small material-icons left">check_box</i>
+                                    <span>200</span>
+                                </div>
+
+                                <h5>
+                    
+                                    <div class="right" id=""></div>
+                                </h5>
+                            </div>
+                            <div class="card-action property-action">
+                                <span class="btn-flat">
+                                    <i class="material-icons">check_box</i>
+                                    Bedroom: <strong>40</strong> 
+                                </span>
+                                <span class="btn-flat">
+                                    <i class="material-icons">check_box</i>
+                                    Bathroom: <strong>80</strong> 
+                                </span>
+                                <span class="btn-flat">
+                                    <i class="material-icons">check_box</i>
+                                    Area: <strong>784441</strong> Square Feet
+                                </span>
+                                <span class="btn-flat">
+                                    <i class="material-icons">comment</i> 
+                                    <strong>Smart Rooms</strong>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
 
             </div>
         </div>
@@ -98,7 +209,7 @@
 
     <!-- TESTIMONIALS SECTION -->
 
-    <section class="section grey lighten-3 center">
+    <!-- <section class="section grey lighten-3 center">
         <div class="container">
 
             <h4 class="section-heading">Testimonials</h4>
@@ -127,7 +238,7 @@
         </div>
 
     </section>
-
+ -->
 
     <!-- BLOG SECTION -->
 
