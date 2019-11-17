@@ -38,7 +38,7 @@
                         <div class="card">
                             <div class="card-image">
                                 
-                                    <span class="card-image-bg" style=""></span>
+                                    <span class="card-image-bg" style="background-image: url({{asset('frontend/images/real-estate2.jpg')}}) " href="#1!">With a parking lane</span>
                                 
                                     <span class="card-image-bg"> Better House<span>
                                
@@ -95,29 +95,29 @@
                         <div class="card">
                             <div class="card-image">
                                 
-                                    <span class="card-image-bg" style=""></span>
+                                    <span class="card-image-bg" style="background-image: url({{asset('frontend/images/real_estate.jpg')}}) " href="#1!">With a soccer and hockey fields</span>
                                 
-                                    <span class="card-image-bg"> Better House<span>
+                                    <span class="card-image-bg">Altitude Apartment<span>
                                
                                     <a class="btn-floating halfway-fab waves-effect waves-light indigo" title="Featured"><i class="small material-icons">star</i></a>
                                 
                             </div>
                             <div class="card-content property-content">
                                 <a href="">
-                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip=""> House</span>
+                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip="">Apartment</span>
                                 </a>
 
                                 <div class="address">
                                     <i class="small material-icons left">location_town</i>
-                                    <span>Nakuru</span>
+                                    <span>Kisii</span>
                                 </div>
                                 <div class="address">
                                     <i class="small material-icons left">place</i>
-                                    <span>Njoro</span>
+                                    <span>Jogoo</span>
                                 </div>
                                 <div class="address">
                                     <i class="small material-icons left">check_box</i>
-                                    <span>140 </span>
+                                    <span>620</span>
                                 </div>
 
                                 <h5>
@@ -128,19 +128,19 @@
                             <div class="card-action property-action">
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Bedroom: <strong>4</strong> 
+                                    Bedroom: <strong>250</strong> 
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Bathroom: <strong>2</strong> 
+                                    Bathroom: <strong>152</strong> 
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Area: <strong>352222</strong> Square Feet
+                                    Area: <strong>856620022</strong> Square Feet
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">comment</i> 
-                                    <strong>Great</strong>
+                                    <strong>Excellent</strong>
                                 </span>
                             </div>
                         </div>
@@ -151,9 +151,9 @@
                         <div class="card">
                             <div class="card-image">
                                 
-                                    <span class="card-image-bg" style=""></span>
+                                    <span class="card-image-bg" style="background-image: url({{asset('frontend/images/property_8.jpg')}}) " href="#1!">Swimming pool Available</span>
                                 
-                                    <span class="card-image-bg"> Better House<span>
+                                    <span class="card-image-bg">Great Rentals<span>
                                
                                     <a class="btn-floating halfway-fab waves-effect waves-light indigo" title="Featured"><i class="small material-icons">star</i></a>
                                 
