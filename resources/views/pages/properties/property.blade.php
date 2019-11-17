@@ -59,7 +59,7 @@
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Area: <strong>3522</strong>Meters square
+                                    Area: <strong>3522</strong> Meters square
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">comment</i> 
@@ -116,7 +116,7 @@
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Area: <strong>8566</strong>Meters square
+                                    Area: <strong>8566</strong> Meters square
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">comment</i> 
@@ -172,7 +172,7 @@
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Area: <strong>7844</strong>Meters square
+                                    Area: <strong>7844</strong> Meters square
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">comment</i> 
