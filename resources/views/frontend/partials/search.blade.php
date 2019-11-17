@@ -33,11 +33,11 @@
                         <div class="input-field col s12 m2">
                             <select name="bedroom" class="browser-default">
                                 <option value="" disabled selected>Bedroom</option>
-                                @if(isset($bedroomdistinct))
-                                    @foreach($bedroomdistinct as $bedroom)
-                                        <option value="{{$bedroom->bedroom}}">{{$bedroom->bedroom}}</option>
-                                    @endforeach
-                                @endif
+                               
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    
                             </select>
                         </div>
 
