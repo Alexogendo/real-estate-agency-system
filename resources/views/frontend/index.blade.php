@@ -80,7 +80,7 @@
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Area: <strong>{{ $property->area}}</strong> Square Feet
+                                    Area: <strong>{{ $property->area}}</strong> Metres square
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">comment</i> 

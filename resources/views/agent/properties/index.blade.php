@@ -26,7 +26,7 @@
                                     <th>SL.</th>
                                     <th>Title</th>
                                     <th>Type</th>
-                                    <th>City</th>
+                                    <th>Town</th>
                                     <th><i class="material-icons small-star p-t-10">comment</i></th>
                                     <th><i class="material-icons small-star p-t-10">stars</i></th>
                                     <th>Action</th>
