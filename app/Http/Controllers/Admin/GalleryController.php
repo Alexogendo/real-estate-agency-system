@@ -57,7 +57,7 @@ class GalleryController extends Controller
             if(!Storage::disk('public')->exists('gallery')){
                 Storage::disk('public')->makeDirectory('gallery');
             }
-            $imagegallery = Image::make($image)->save();
+            $imagegallery = Image::make($image)->save($imagename, 90);
             Storage::disk('public')->put('gallery/'.$imagename, $imagegallery);
 
             $imagelink = Storage::url($imagename);

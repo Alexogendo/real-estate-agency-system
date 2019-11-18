@@ -244,7 +244,7 @@
 
     <section class="section center">
         <div class="row">
-            <h4 class="section-heading">Recent Blog</h4>
+            <h4 class="section-heading"></h4>
         </div>
         <div class="container">
             <div class="row">

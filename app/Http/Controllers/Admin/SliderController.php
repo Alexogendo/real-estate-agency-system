@@ -29,7 +29,7 @@ class SliderController extends Controller
     {
         $request->validate([
             'title' => 'required|unique:sliders|max:255',
-            'image' => 'required|mimes:jpeg,jpg,png'
+            'image' => 'required|mimes:jpeg,jpg,png,bmp,gif'
         ]);
 
         $image = $request->file('image');
@@ -42,7 +42,7 @@ class SliderController extends Controller
             if(!Storage::disk('public')->exists('slider')){
                 Storage::disk('public')->makeDirectory('slider');
             }
-            $slider = Image::make($image)->resize(1600, 480)->save();
+            $slider = Image::make($image)->resize(1600, 480)->save($imagename, 90);
             Storage::disk('public')->put('slider/'.$imagename, $slider);
         }else{
             $imagename = 'default.png';
@@ -71,7 +71,7 @@ class SliderController extends Controller
     {
         $request->validate([
             'title' => 'required|max:255',
-            'image' => 'mimes:jpeg,jpg,png'
+            'image' => 'mimes:jpeg,jpg,png,bmp,gif'
         ]);
 
         $image = $request->file('image'); 
@@ -87,7 +87,7 @@ class SliderController extends Controller
             if(Storage::disk('public')->exists('slider/'.$slider->image)){
                 Storage::disk('public')->delete('slider/'.$slider->image);
             }
-            $sliderimg = Image::make($image)->resize(1600, 480)->save();
+            $sliderimg = Image::make($image)->resize(1600, 480)->save($imagename, 90);
             Storage::disk('public')->put('slider/'.$imagename, $sliderimg);
         }else{
             $imagename = $slider->image;

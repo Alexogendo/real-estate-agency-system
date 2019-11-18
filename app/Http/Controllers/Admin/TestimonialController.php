@@ -43,7 +43,7 @@ class TestimonialController extends Controller
             if(!Storage::disk('public')->exists('testimonial')){
                 Storage::disk('public')->makeDirectory('testimonial');
             }
-            $testimonial = Image::make($image)->resize(160, 160)->save();
+            $testimonial = Image::make($image)->resize(160, 160)->save($imagename, 90);
             Storage::disk('public')->put('testimonial/'.$imagename, $testimonial);
         }else{
             $imagename = 'default.png';
@@ -89,7 +89,7 @@ class TestimonialController extends Controller
             if(Storage::disk('public')->exists('testimonial/'.$testimonial->image)){
                 Storage::disk('public')->delete('testimonial/'.$testimonial->image);
             }
-            $testimonialimg = Image::make($image)->resize(160, 160)->save();
+            $testimonialimg = Image::make($image)->resize(160, 160)->save($imagename, 90);
             Storage::disk('public')->put('testimonial/'.$imagename, $testimonialimg);
         }else{
             $imagename = $testimonial->image;
