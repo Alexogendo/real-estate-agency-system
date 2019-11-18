@@ -33,174 +33,63 @@
             </div>
             <div class="row">
 
-                
+                 @foreach($properties as $property)
                     <div class="col s12 m4">
                         <div class="card">
                             <div class="card-image">
-                                
-                                    <span class="card-image-bg" style="background-image: url({{asset('frontend/images/real-estate2.jpg')}}) " href="#1!">With a parking lane</span>
-                                
-                                    <span class="card-image-bg"> Better House<span>
-                               
+                                @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
+                                    <span class="card-image-bg" style="background-image:url({{Storage::url('property/'.$property->image)}});"></span>
+                                @else
+                                    <span class="card-image-bg"><span>
+                                @endif
+                                @if($property->featured == 1)
                                     <a class="btn-floating halfway-fab waves-effect waves-light indigo" title="Featured"><i class="small material-icons">star</i></a>
-                                
+                                @endif
                             </div>
                             <div class="card-content property-content">
-                                <a href="">
-                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip=""> House</span>
+                                <a href="{{ route('property.show',$property->slug) }}">
+                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip="{{ $property->title }}">{{ str_limit( $property->title, 18 ) }}</span>
                                 </a>
 
                                 <div class="address">
-                                    <i class="small material-icons left">location_town</i>
-                                    <span>Nakuru</span>
+                                    <i class="small material-icons left">location_city</i>
+                                    <span>{{ ucfirst($property->city) }}</span>
                                 </div>
                                 <div class="address">
                                     <i class="small material-icons left">place</i>
-                                    <span>Njoro</span>
+                                    <span>{{ ucfirst($property->address) }}</span>
                                 </div>
                                 <div class="address">
                                     <i class="small material-icons left">check_box</i>
-                                    <span>140 </span>
+                                    <span>{{ ucfirst($property->type) }} for {{ $property->purpose }}</span>
                                 </div>
 
                                 <h5>
-                    
-                                    <div class="right" id=""></div>
+                                    Ksh {{ $property->price }}
+                                    <div class="right" id="propertyrating-{{$property->id}}"></div>
                                 </h5>
                             </div>
                             <div class="card-action property-action">
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Bedroom: <strong>4</strong> 
+                                    Bedroom: <strong>{{ $property->bedroom}}</strong> 
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Bathroom: <strong>2</strong> 
+                                    Bathroom: <strong>{{ $property->bathroom}}</strong> 
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">check_box</i>
-                                    Area: <strong>3522</strong> Meters square
+                                    Area: <strong>{{ $property->area}}</strong> Square Feet
                                 </span>
                                 <span class="btn-flat">
                                     <i class="material-icons">comment</i> 
-                                    <strong>Great</strong>
+                                    <strong>{{ $property->comments_count}}</strong>
                                 </span>
                             </div>
                         </div>
                     </div>
-
-
-
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                
-                                    <span class="card-image-bg" style="background-image: url({{asset('frontend/images/real_estate.jpg')}}) " href="#1!">With a soccer and hockey fields</span>
-                                
-                                    <span class="card-image-bg">Altitude Apartment<span>
-                               
-                                    <a class="btn-floating halfway-fab waves-effect waves-light indigo" title="Featured"><i class="small material-icons">star</i></a>
-                                
-                            </div>
-                            <div class="card-content property-content">
-                                <a href="">
-                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip="">Apartment</span>
-                                </a>
-
-                                <div class="address">
-                                    <i class="small material-icons left">location_town</i>
-                                    <span>Kisii</span>
-                                </div>
-                                <div class="address">
-                                    <i class="small material-icons left">place</i>
-                                    <span>Jogoo</span>
-                                </div>
-                                <div class="address">
-                                    <i class="small material-icons left">check_box</i>
-                                    <span>620</span>
-                                </div>
-
-                                <h5>
-                    
-                                    <div class="right" id=""></div>
-                                </h5>
-                            </div>
-                            <div class="card-action property-action">
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    Bedroom: <strong>250</strong> 
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    Bathroom: <strong>152</strong> 
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    Area: <strong>8566</strong> Meters square
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">comment</i> 
-                                    <strong>Excellent</strong>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image">
-                                
-                                    <span class="card-image-bg" style="background-image: url({{asset('frontend/images/property_8.jpg')}}) " href="#1!">Swimming pool Available</span>
-                                
-                                    <span class="card-image-bg">Great Rentals<span>
-                               
-                                    <a class="btn-floating halfway-fab waves-effect waves-light indigo" title="Featured"><i class="small material-icons">star</i></a>
-                                
-                            </div>
-                            <div class="card-content property-content">
-                                <a href="">
-                                    <span class="card-title tooltipped" data-position="bottom" data-tooltip="">Rental</span>
-                                </a>
-
-                                <div class="address">
-                                    <i class="small material-icons left">location_town</i>
-                                    <span>Kisumu</span>
-                                </div>
-                                <div class="address">
-                                    <i class="small material-icons left">place</i>
-                                    <span>Lake side</span>
-                                </div>
-                                <div class="address">
-                                    <i class="small material-icons left">check_box</i>
-                                    <span>200</span>
-                                </div>
-
-                                <h5>
-                    
-                                    <div class="right" id=""></div>
-                                </h5>
-                            </div>
-                            <div class="card-action property-action">
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    Bedroom: <strong>40</strong> 
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    Bathroom: <strong>80</strong> 
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">check_box</i>
-                                    Area: <strong>7844</strong> Meters square
-                                </span>
-                                <span class="btn-flat">
-                                    <i class="material-icons">comment</i> 
-                                    <strong>Smart Rooms</strong>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach
 
             </div>
         </div>
